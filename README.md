@@ -9,8 +9,8 @@ by Díaz et al. (2015).
 To install this package in Stata, run the following commands:
 ```Stata
 local url "https://raw.githubusercontent.com/igutierrezm"
-net install lp,        all from("`url'/lp/master")  
-net install blopmatch, all from("`url'/blopmatch/master")  
+net install lp,        from("`url'/lp/master")  
+net install blopmatch, from("`url'/blopmatch/master")  
 ```
 After installation, type
 ```Stata
