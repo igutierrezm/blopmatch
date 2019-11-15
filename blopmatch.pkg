@@ -1,0 +1,43 @@
+v 3
+d blopmatch {hline 2} Treatment-effects estimation by blop-matching
+d
+d Treatment-effects estimation by blop-matching.
+d
+d After installation, see {cmd:help blopmatch}.
+d
+d Author(s)            Juan Díaz, Universidad de Chile.
+d                      Jorge Rivera, Universidad de Chile.
+d                      Iván Gutiérrez, Pontificia Universidad Católica de Chile.
+d Distribution-Date    20191115
+d Support              isgutierrez@mat.uc.cl
+d
+d {title:References}
+d
+d Diaz, J., Rau, T., and J. Rivera (2015).
+d A Matching Estimator Based on a Bilevel Optimization Problem.
+d {it:Review of Economics & Statistics} 97(4): 803-812.
+
+* ADO-FILES
+f ado/blopmatch.ado
+f ado/blopmatch_check_type.ado
+f ado/blopmatch_label_to_value.ado
+f ado/blopmatch_parse_btolerance.ado
+f ado/blopmatch_parse_fweight.ado
+f ado/blopmatch_parse_gvar.ado
+f ado/blopmatch_parse_iterate.ado
+f ado/blopmatch_parse_metric.ado
+f ado/blopmatch_parse_otolerance.ado
+f ado/blopmatch_parse_stat.ado
+f ado/blopmatch_parse_teffects.ado
+f ado/blopmatch_parse_tvar.ado
+f ado/blopmatch_parse.ado
+f ado/blopmatch_report.ado
+
+* MLIB-FILE
+f ado/lblopmatch.mlib
+
+* HELP-FILE
+F man/blopmatch.sthlp
+
+* DATASETS
+f data/nsw.dta

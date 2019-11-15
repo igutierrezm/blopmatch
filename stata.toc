@@ -1,0 +1,4 @@
+v 1
+d Treatment-effects estimation by blop-matching.
+d Ivan Gutiérrez, Juan Díaz, Jorge Rivera.
+p blopmatch Treatment-effects estimation by blop-matching.
