@@ -8,8 +8,12 @@ by Díaz et al. (2015).
 
 To install this package in Stata, run the following commands:
 ```Stata
+// Uninstall any previous version of the packages lp and blopmatch
+capture : ado uninstall lp
+capture : ado uninstall blopmatch
+
+// Install the new version of the package
 local url "https://raw.githubusercontent.com/igutierrezm"
-net install lp,        from("`url'/lp/master")  
 net install blopmatch, from("`url'/blopmatch/master")  
 ```
 After installation, type

@@ -8,7 +8,7 @@ d
 d Author(s)            Juan Díaz, Universidad de Chile.
 d                      Jorge Rivera, Universidad de Chile.
 d                      Iván Gutiérrez, Pontificia Universidad Católica de Chile.
-d Distribution-Date    20191115
+d Distribution-Date    20200705
 d Support              isgutierrez@mat.uc.cl
 d
 d {title:References}
@@ -32,9 +32,6 @@ f ado/blopmatch_parse_teffects.ado
 f ado/blopmatch_parse_tvar.ado
 f ado/blopmatch_parse.ado
 f ado/blopmatch_report.ado
-
-* MLIB-FILE
-f ado/lblopmatch.mlib
 
 * HELP-FILE
 F man/blopmatch.sthlp

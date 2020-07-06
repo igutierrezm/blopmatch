@@ -89,7 +89,6 @@
 {synopt :{opt ivar:iance}}              inverse diagonal sample covariate
                                         covariance{p_end}
 {synopt :{opt eucl:idean}}              identity{p_end}
-{synopt :{opt mat:rix} {it:matname}}    user-supplied scaling matrix{p_end}
 {synoptline}
 
 {pstd}
@@ -334,7 +333,3 @@ Linear Programming with MATLAB.
 {it: MPS-SIAM Series on Optimization}.
 {p_end}
 {break}
-
-{title:TODO}
-
-    1. Corregir el link mencionado en la descripción de la opción metric.
