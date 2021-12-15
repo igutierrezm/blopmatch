@@ -5,11 +5,14 @@ d Treatment-effects estimation by blop-matching.
 d
 d After installation, see {cmd:help blopmatch}.
 d
-d Author(s)            Juan Díaz, Universidad de Chile.
-d                      Jorge Rivera, Universidad de Chile.
-d                      Iván Gutiérrez, Pontificia Universidad Católica de Chile.
-d Distribution-Date    20200705
-d Support              isgutierrez@mat.uc.cl
+d Author(s):
+d Juan Díaz, Universidad de Chile.
+d Jorge Rivera, Universidad de Chile.
+d Iván Gutiérrez, Pontificia Universidad Católica de Chile.
+d
+d Distribution-Date: 20211214
+d
+d Support: isgutierrez@mat.uc.cl
 d
 d {title:References}
 d

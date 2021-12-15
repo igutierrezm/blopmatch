@@ -2,8 +2,7 @@ cls
 clear all
 set more off
 
-// net install lp,        from("`c(pwd)'/../lp") force 
-// net install blopmatch, from("`c(pwd)'/../blopmatch") force
+net install blopmatch, from("`c(pwd)'/..") force
 
 webuse cattaneo2, clear
 blopmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)

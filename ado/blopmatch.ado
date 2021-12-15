@@ -714,14 +714,14 @@ function blopmatch_rmcoll(
     st_view(X, ., vars, touse)
 
     // Find collinear columns of X
-    k = max((ustrwordcount(evar), 1))
+    k = max((cols(tokens(evar)), 1))
     X = cross(X, X)
     X = invsym(X, 1..k)
     c = (diagonal(X) :!= 0)
 
     // Update evar and xvar
-    kevar = ustrwordcount(evar)
-    kxvar = ustrwordcount(xvar)
+    kevar = cols(tokens(evar))
+    kxvar = cols(tokens(xvar))
     if (kevar > 1) {
         k0   = 2
         k1   = kevar
