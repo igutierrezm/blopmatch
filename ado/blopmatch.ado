@@ -270,6 +270,12 @@ function blopmatch_get_data(
     tvector = st_data(., s("tvar"), s("touse"))
     Xmatrix = st_data(., s("xvar"), s("touse"))
 
+    // Remove any remaining ld variable
+    XX = cross(Xmatrix, Xmatrix)
+    XX = invsym(XX)
+    c = (diagonal(XX) :!= 0)
+    Xmatrix = Xmatrix[., selectindex(c :== 1)]
+
     // Partition the data, according to tvar
     info = panelsetup(tvector, 1)
     for (h = 1; h < 3; h++) {
