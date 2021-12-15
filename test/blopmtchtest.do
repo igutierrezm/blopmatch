@@ -1,11 +1,12 @@
 cls
 clear all
 set more off
-
+capture : ado uninstall blopmatch
 net install blopmatch, from("`c(pwd)'/..") force
 
 webuse cattaneo2, clear
 blopmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
+teffects nnmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
 
 
 // use "data/test-data-01", clear

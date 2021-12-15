@@ -171,6 +171,9 @@ real scalar lp::solve()
         B[r] = N[s]
         N[s] = swap
     }
+    B  = B
+    xB = h :* (col_sf[B])'
+    z  = u'*b    
     return(0)
 }
 end
