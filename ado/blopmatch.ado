@@ -223,14 +223,21 @@ function blopmatch_estimate()
         // Get ate/ate point estimate
         pnts[group] = blopmatch_get_pnt(Ysub, Nsub, W, B, Yb = .)
 
-        // Get "c-coefficients" (required for variance estimation)
-        blopmatch_get_c_coefficients(Nsub, W, B, C = .)
+		// Provide a simple solution when some N[g] is lower than 2
+        // TODO: Explore a better solution for this case
+		if (*Nsub[1] < 2 || *Nsub[2] < 2) {
+			vars[group] = 0
+		} 
+		else {		
+			// Get "c-coefficients" (required for variance estimation)
+			blopmatch_get_c_coefficients(Nsub, W, B, C = .)
 
-        // Get weights for variance estimation
-        blopmatch_get_var_weights(Xsub, Nsub, W, B, F = .)
+			// Get weights for variance estimation
+			blopmatch_get_var_weights(Xsub, Nsub, W, B, F = .)
 
-        // Get ate/ate variance estimate
-        vars[group] = blopmatch_get_var(Ysub, Nsub, W, B, C, F, Yb, pnts[group])
+			// Get ate/ate variance estimate
+			vars[group] = blopmatch_get_var(Ysub, Nsub, W, B, C, F, Yb, pnts[group])
+		}
     }
 
     // Combined result
@@ -649,7 +656,7 @@ function blopmatch_get_var(
     pointer vector Yb,
     real    vector tau
 )
-{
+{	
     // Imputations (using other observations in the same group)
     Yt = J(2, 1, NULL)
     for (g = 1; g < 3; g++) {
