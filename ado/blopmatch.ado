@@ -334,17 +334,18 @@ function blopmatch_get_subdata(
     Nsub[3] = &max((*Nsub[1], *Nsub[2]))
     Nsub[4] = &(*Nsub[1] + *Nsub[2])
 	
-	// Check that each group have a least 2 observations
-	if (*Nsub[1] < 2 || *Nsub[2] < 2) {
-		printf(
-			"{err}fewer than 2 nearest-neighbor matches for some " +
-			"observations when in-group matching for variance estimation; " +
-			"use \noption " +
-			"{helpb teffects_ipw##osample:osample}{bf:(`osample')} to " +
-			"identify all observations with deficient matches\n"
-		)
-		exit(459)
-	}
+// 	// Check that each group have a least 2 observations
+// 	if (*Nsub[1] < 2 || *Nsub[2] < 2) {
+// 		printf(
+// 			"{err}fewer than 2 nearest-neighbor matches for some " +
+// 			"observations when in-group matching for variance estimation; " +
+// 			"use \noption " +
+// 			"{helpb teffects_ipw##osample:osample}{bf:(`osample')} to " +
+// 			"identify all observations with deficient matches\n"
+// 		)
+// 		exit(459)
+// 	}
+
     // Save sample size in a common table
     for (q = 1; q <= 2; q++) {
         (*N[q])[group] = *Nsub[q]

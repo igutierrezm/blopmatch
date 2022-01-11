@@ -4,9 +4,16 @@ set more off
 capture : ado uninstall blopmatch
 net install blopmatch, from("`c(pwd)'") force
 
-webuse cattaneo2, clear
-blopmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
-teffects nnmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
+set obs 7
+generate y = rnormal()
+generate x = rnormal()
+generate e = 1 - (_n > 4)
+generate d = mod(_n, 2)
+blopmatch (y x) (d)
+
+// webuse cattaneo2, clear
+// blopmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
+// teffects nnmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
 
 
 // use "data/test-data-01", clear
