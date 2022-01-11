@@ -345,6 +345,16 @@ function blopmatch_get_subdata(
 // 		)
 // 		exit(459)
 // 	}
+	
+	// Check that each group have a least 1 observation
+	if (*Nsub[1] < 1 || *Nsub[2] < 1) {
+		printf(
+			"{err}no exact matches for some observations; use " +
+			"{helpb teffects_ipw##osample:osample}{bf:(`osample')} to " +
+			"identify all observations with deficient matches\n"
+		)
+		exit(459)
+	}
 
     // Save sample size in a common table
     for (q = 1; q <= 2; q++) {
