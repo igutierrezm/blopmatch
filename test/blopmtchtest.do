@@ -2,7 +2,7 @@ cls
 clear all
 set more off
 capture : ado uninstall blopmatch
-net install blopmatch, from("`c(pwd)'/..") force
+net install blopmatch, from("`c(pwd)'") force
 
 webuse cattaneo2, clear
 blopmatch (bweight mage prenatal1 mmarried fbaby) (mbsmoke)
