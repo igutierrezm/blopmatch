@@ -499,6 +499,8 @@ function blopmatch_blop2(
 				rk0 = rank(P2.A[., B])
 				while (rk0 < 1 + K) {
 					if (col > rows(N0)) {
+                        // A short term solution for this pathological case
+						w = J(rows(B), 1, 1) / rows(B)
 						return(10)
 					}
 					B_B = (B \ N0[col])
